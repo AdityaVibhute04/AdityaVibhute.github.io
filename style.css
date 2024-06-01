@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+    justify-content: center;
+}
+
+input {
+    display: flex;
+    justify-content: center;
+    padding-left: 40%;
+    padding-right: 50%;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#plot {
+    align-items: center;
+    margin-top: 20px;
+    width: 1000px;
+    height: 700px;
+}

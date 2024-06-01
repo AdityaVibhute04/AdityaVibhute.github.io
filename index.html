@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPP plot</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>SPP plot</h1>
+      <label for="solarWattage">Enter solar Power:</label>
+        <input type="number" id="solarWattage" placeholder="in Watts" />
+      <label for="peakRate">Enter peak rate:</label>
+        <input type="number" id="peakRate" placeholder="in Rs./kWh" />
+      <label for="normalRate">Enter normal rate:</label>
+        <input type="number" id="normalRate" placeholder="in Rs./kWh" />
+      <label for="peakTimeDuration">Enter peak time duration (during daytime only):</label>
+        <input type="number" id="peakTimeDuration" placeholder="in hours" />
+      <label for="normalTimeDuration">Enter normal time duration:</label>
+        <input type="number" id="normalTimeDuration" placeholder="in hours" />
+        <button onclick="drawPlot()">Draw Plot</button>
+        <div id="plot"></div>
+      <h1>Calculated SPP</h1>
+      <div id="SPP"></div>
+    </div>
+    <script src="sketch.js"></script>
+</body>
+</html>
