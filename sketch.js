@@ -8,7 +8,7 @@ function drawPlot() {
     const lifeSpan = document.getElementById('lifeSpan').value;
   
   //Calaulated values
-    const initialInvestment = 54 * solarWattage * power((1+interestRate),lifeSpan);
+    const initialInvestment = 54 * solarWattage * power((1+interestRate),lifeSpan) * 0.01;
     const savingsFirstYear = (peakTime*peakRate + normalTime*normalRate)*solarWattage*365/1000
     const savings = [];
     const time = [];
