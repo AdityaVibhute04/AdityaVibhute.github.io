@@ -4,9 +4,11 @@ function drawPlot() {
     const peakTime = document.getElementById('peakTimeDuration').value;
     const normalRate = document.getElementById('normalRate').value;
     const normalTime = document.getElementById('normalTimeDuration').value;
+    const interestRate = document.getElementById('interestRatae').value;
+    const lifeSpan = document.getElementById('lifeSpan').value;
   
   //Calaulated values
-    const initialInvestment = 54 * solarWattage;
+    const initialInvestment = 54 * solarWattage * power((1+interestRate),lifeSpan);
     const savingsFirstYear = (peakTime*peakRate + normalTime*normalRate)*solarWattage*365/1000
     const savings = [];
     const time = [];
@@ -48,11 +50,6 @@ function drawPlot() {
 
     Plotly.newPlot('plot', data, layout);
 }
-
-   //Displaying SPP calculation
-
-  const SPP = initialInvestment/(savingsFirstYear)
-  document.getElementById('SPP').innerText = ("SPP: " + SPP)
 
 
     
