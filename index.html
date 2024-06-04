@@ -3,30 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SPP plot</title>
+    <title>Discounted Payback Period Calculator</title>
+    <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>SPP plot</h1>
-      <label for="solarWattage">Enter solar Power:</label>
-        <input type="number" id="solarWattage" placeholder="in Watts" />
-      <label for="peakRate">Enter peak rate:</label>
-        <input type="number" id="peakRate" placeholder="in Rs./kWh" />
-      <label for="normalRate">Enter normal rate:</label>
-        <input type="number" id="normalRate" placeholder="in Rs./kWh" />
-      <label for="peakTimeDuration">Enter peak time duration (during daytime only):</label>
-        <input type="number" id="peakTimeDuration" placeholder="in hours" />
-      <label for="normalTimeDuration">Enter normal time duration:</label>
-        <input type="number" id="normalTimeDuration" placeholder="in hours" />
-      <label for="interestRate">Enter interest rate:</label>
-        <input type="number" id="interestRate" placeholder="0-100" />
-      <label for="lifeSpan">Enter life span:</label>
-        <input type="number" id="lifeSpan" placeholder="in yrs" />
-        <button onclick="drawPlot()">Draw Plot</button>
+        <h1>Discounted Payback Period Calculator</h1>
+        <form id="inputForm">
+            <label for="solarWattage">Solar Wattage (in Watts):</label>
+            <input type="number" id="solarWattage" name="solarWattage">
+            
+            <label for="peakRate">Peak Rate (in Rs/kWh):</label>
+            <input type="number" step="0.01" id="peakRate" name="peakRate">
+            
+            <label for="peakTimeDuration">Peak Time Duration during day (in hours):</label>
+            <input type="number" step="0.01" id="peakTimeDuration" name="peakTimeDuration">
+            
+            <label for="normalRate">Normal Rate (in Rs/kWh):</label>
+            <input type="number" step="0.01" id="normalRate" name="normalRate">
+            
+            <label for="normalTimeDuration">Normal Time Duration (in hours):</label>
+            <input type="number" step="0.01" id="normalTimeDuration" name="normalTimeDuration">
+            
+            <label for="lifeSpan">Life Span (in years):</label>
+            <input type="number" id="lifeSpan" name="lifeSpan">
+            
+            <label for="discountRate">Discount Rate (in %):</label>
+            <input type="number" step="0.01" id="discountRate" name="discountRate">
+            
+            <button type="submit">Calculate</button>
+        </form>
         <div id="plot"></div>
+        <p id="result"></p>
     </div>
-    <script src="sketch.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
