@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discounted Payback Period Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Discounted Payback Period Calculator</h1>
+        <form id="inputForm">
+            <label for="solarWattage">Solar Wattage (in Watts):</label>
+            <input type="number" id="solarWattage" name="solarWattage">
+            
+            <label for="peakRate">Peak Rate (in Rs/kWh):</label>
+            <input type="number" step="0.01" id="peakRate" name="peakRate">
+            
+            <label for="peakTimeDuration">Peak Time Duration during day (in hours):</label>
+            <input type="number" step="0.01" id="peakTimeDuration" name="peakTimeDuration">
+            
+            <label for="normalRate">Normal Rate (in Rs/kWh):</label>
+            <input type="number" step="0.01" id="normalRate" name="normalRate">
+            
+            <label for="normalTimeDuration">Normal Time Duration (in hours):</label>
+            <input type="number" step="0.01" id="normalTimeDuration" name="normalTimeDuration">
+            
+            <label for="lifeSpan">Life Span (in years):</label>
+            <input type="number" id="lifeSpan" name="lifeSpan">
+            
+            <label for="discountRate">Discount Rate (in %):</label>
+            <input type="number" step="0.01" id="discountRate" name="discountRate">
+            
+            <button type="submit">Calculate</button>
+        </form>
+        <div id="plot"></div>
+        <p id="result"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
